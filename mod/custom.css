@@ -1,13 +1,27 @@
+/* GLOBAL */
+:root {
+  --leftbarwidth: 300px; /* adjust this for your best view */
+  --browserborder: 12px; /* change this if you want to change border size */
+  --PinnedTab: 42px; /* pinned tabs height */
+  --biggertab: 42px; /* normal tabs height */
+  --lightgradient: linear-gradient(#c6cbd7, #13d4f9);
+  /* ^^^ Adjust as you want ^^^ */
+  --PinnedWidth: calc(
+    var(--leftbarwidth) - var(--browserborder) - var(--browserborder)
+  );
+}
+
 /* CUSTOM */
 
 /* Title bar */
 .mainbar {
-  padding: 12px !important;
+  padding: 12px 4px !important;
 }
 
 /* Vivaldi icon */
 .mainbar > div > div > button {
-  display: none !important;
+  /* display: none !important; */
+  scale: 132% !important;
 }
 
 /* Webpage title */
@@ -30,12 +44,21 @@
 }
 
 /* New tab */
+.toolbar.toolbar-tabbar.toolbar-large.tab-position {
+  order: 1 !important;
+  height: 42px !important;
+}
+
+#tabs-container > div > div.tab-strip > div {
+  padding-top: 12px !important;
+}
+
 #tabs-container > div > div.tab-strip > div > div {
   min-width: 0 !important;
   justify-content: center !important;
 }
 
-#tabs-container
+/* #tabs-container
   > div
   > div.tab-strip
   > div.toolbar.toolbar-tabbar.toolbar-large.tab-position {
@@ -43,18 +66,29 @@
   justify-content: center !important;
   min-width: none !important;
   margin: 12px 0 8px !important;
-  padding-top: 12px !important;
-  border-top: #343b4b50 2px solid !important;
-}
+} */
 
 #tabs-container > div > div.tab-strip > div > div > button {
   text-align: center !important;
-  padding-right: 24px !important;
   justify-content: center !important;
+  /* padding-right: 24px !important; */
 }
 
 #tabs-container > div > div.tab-strip > div > div > button:after {
   width: auto !important;
+}
+
+.svg-tab-selection {
+  max-height: var(--PinnedTab) !important;
+}
+
+.svg-tab-selection rect {
+  height: var(--PinnedTab) !important;
+}
+
+.svg-tab-stack,
+.svg-tab-selection {
+  height: auto !important;
 }
 
 /* Active tab */
@@ -68,24 +102,51 @@
   filter: none !important;
 }
 
+/* Tab seperator */
+#tabs-container > div > div.tab-strip > div.separator > hr {
+  background: none !important;
+  border: none !important;
+}
+
+/* Workspace button & popup */
+#main button[name='WorkspaceButton'] {
+  min-width: 132px !important;
+}
+
+#browser:has(.WorkspacePopup) .ToolbarButtonPopup-DefaultStyles {
+  top: 52px !important;
+}
+
+#browser:has(.WorkspacePopup) .ToolbarButtonPopup-DefaultStyles::before {
+  display: none !important;
+}
+
+/* User button */
+#main > div.mainbar > div > div > div.button-toolbar.button-circularimage {
+  margin-left: 4px !important;
+}
+
+#main > div.mainbar > div > div > div.button-toolbar.button-circularimage img {
+  scale: 80% !important;
+}
+
 /* Extensions */
 .toolbar-extensions {
   flex-direction: row-reverse !important;
-  margin-left: 8px !important;
+}
+
+/* Zoom */
+.page-zoom-controls div:first-of-type {
+  display: none !important;
+}
+
+/* Status info */
+.StatusInfo {
+  margin-bottom: 32px !important;
 }
 
 /* ARCHY */
-:root {
-  --leftbarwidth: 300px; /* adjust this for your best view */
-  --browserborder: 12px; /* change this if you want to change border size */
-  --PinnedTab: 42px; /* pinned tabs height */
-  --biggertab: 42px; /* normal tabs height */
-  --lightgradient: linear-gradient(#c6cbd7, #13d4f9);
-  /* ^^^ Adjust as you want ^^^ */
-  --PinnedWidth: calc(
-    var(--leftbarwidth) - var(--browserborder) - var(--browserborder)
-  );
-}
+
 /* Theme settings */
 .theme-id-ccf1c7b4-2d19-415f-9ef4-9b24d4df0253 {
   &,
@@ -465,7 +526,7 @@
   .tabbar-workspace-button > button > .button-toolbar-menu-indicator {
     display: none;
   }
-  #browser:has(.WorkspacePopup) {
+  /* #browser:has(.WorkspacePopup) {
     .ToolbarButtonPopup-DefaultStyles {
       top: unset !important;
       bottom: calc(var(--browserborder) + 34px) !important;
@@ -475,7 +536,7 @@
       bottom: -12px;
       transform: rotate(180deg);
     }
-  }
+  } */
   /* Bookmarks */
   #main:has(.synced-tabs-button) .bookmark-bar {
     left: calc(var(--browserborder) + 64px);
