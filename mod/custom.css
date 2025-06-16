@@ -41,6 +41,15 @@
 /* URL bar */
 .UrlBar-AddressField.button-textonly:not(:focus-within) {
   background: #0b0d0e !important;
+  transition: background 0.2s ease-in-out !important;
+}
+
+.UrlBar-AddressField.button-textonly:not(:focus-within):hover {
+  background: #c6cbd715 !important;
+}
+
+.UrlField:hover {
+  background: none !important;
 }
 
 /* New tab */
@@ -106,6 +115,29 @@
 #tabs-container > div > div.tab-strip > div.separator > hr {
   background: none !important;
   border: none !important;
+}
+
+/* Tab header */
+.tab-header {
+  gap: 4px !important;
+}
+
+/* Tab group */
+.tab-group-indicator {
+  top: 80% !important;
+}
+
+.tab-group-indicator > .tab-indicator {
+  border-radius: 4px !important;
+  height: 8px !important;
+}
+
+.color-behind-tabs-on .tab-indicator {
+  background-color: #343b4b !important;
+}
+
+.color-behind-tabs-on .tab.active + .tab-group-indicator .tab-indicator.active {
+  background-color: #13d4f9 !important;
 }
 
 /* Workspace button & popup */
@@ -413,9 +445,9 @@
   .tab-position:not(.is-pinned) .tab .tab-header {
     flex-basis: var(--biggertab) !important;
   }
-  .tab-position:not(.is-pinned) .tab .tab-header > .favicon {
+  /* .tab-position:not(.is-pinned) .tab .tab-header > .favicon {
     min-width: 26px !important;
-  }
+  } */
   .tab-position:not(.is-pinned) .tab .tab-header > .title {
     padding: 0;
   }
@@ -434,7 +466,7 @@
       top: 0 !important;
       order: 0;
       margin-left: 0px;
-      margin-right: 6px;
+      /* margin-right: 6px; */
       color: var(--colorFg);
       width: 18px;
       height: 18px;
