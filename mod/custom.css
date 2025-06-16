@@ -127,17 +127,21 @@
   top: 80% !important;
 }
 
+.tab-group-indicator > div {
+  background-color: #13d4f9 !important;
+}
+
 .tab-group-indicator > .tab-indicator {
   border-radius: 4px !important;
   height: 8px !important;
 }
 
 .color-behind-tabs-on .tab-indicator {
-  background-color: #343b4b !important;
+  background-color: #c6cbd725 !important;
 }
 
 .color-behind-tabs-on .tab.active + .tab-group-indicator .tab-indicator.active {
-  background-color: #13d4f9 !important;
+  background-color: #c6cbd7 !important;
 }
 
 /* Workspace button & popup */
