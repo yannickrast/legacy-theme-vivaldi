@@ -124,20 +124,22 @@
 
 /* Tab group */
 .tab-group-indicator {
-  top: 80% !important;
-}
-
-.tab-group-indicator > div {
-  background-color: #13d4f9 !important;
+  top: 86% !important;
+  overflow: hidden !important;
 }
 
 .tab-group-indicator > .tab-indicator {
-  border-radius: 4px !important;
-  height: 8px !important;
+  height: 2.4px !important;
+  padding: 0 1px !important;
+}
+
+.tab-indicator {
+  border: none !important;
+  border-radius: 0px !important;
 }
 
 .color-behind-tabs-on .tab-indicator {
-  background-color: #c6cbd725 !important;
+  background-color: #c6cbd735 !important;
 }
 
 .color-behind-tabs-on .tab.active + .tab-group-indicator .tab-indicator.active {
