@@ -31,7 +31,9 @@
 
 /* Windows buttons */
 #main > div.mainbar > div > div > div.window-buttongroup.on-mainbar {
+  z-index: 999 !important;
   gap: 2px !important;
+  background-color: #181b1f !important;
 }
 
 #main > div.mainbar > div > div > div.window-buttongroup.on-mainbar button {
@@ -53,6 +55,10 @@
 }
 
 /* New tab */
+.newtab {
+  width: 100% !important;
+}
+
 .toolbar.toolbar-tabbar.toolbar-large.tab-position {
   order: 1 !important;
   height: 42px !important;
@@ -403,7 +409,7 @@
   }
   .resize {
     display: grid !important;
-    height: calc(100% - 28px);
+    /* height: calc(100% - 28px); */
     flex: unset !important;
     grid-auto-rows: max-content;
     gap: 0.5em;
