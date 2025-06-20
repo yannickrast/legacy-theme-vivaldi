@@ -170,6 +170,10 @@
 }
 
 /* Tab Strip & Grid Layout */
+.resize {
+  max-height: unset !important;
+}
+
 #tabs-container > div > div.tab-strip > div {
   padding-top: 12px !important;
 }
@@ -276,6 +280,24 @@
 #browser.color-behind-tabs-on .tab.active.active {
   background-color: #343b4b75 !important;
 }
+
+/* Ensure selection SVGs fill the tab height */
+.svg-tab-stack,
+.svg-tab-selection {
+  height: 100% !important;
+}
+
+.tabs-left .tab:not(.tab-accordion, .tab-in-accordion) + .svg-tab-stack,
+.tabs-left .tab:not(.tab-accordion, .tab-in-accordion) + .svg-tab-selection,
+.tabs-right
+  .tab:not(.tab-accordion, .tab-in-accordion.tab-first-in-group)
+  + .svg-tab-stack,
+.tabs-right
+  .tab:not(.tab-accordion, .tab-in-accordion.tab-first-in-group)
+  + .svg-tab-selection {
+  max-height: 100% !important;
+}
+
 .transparent-tabbar .tab.active .tab-header .favicon:not(.svg),
 .theme-dark .tab.active .tab-header .favicon:not(.svg),
 .acc-dark.color-behind-tabs-off .tab.active .tab-header .favicon:not(.svg) {
