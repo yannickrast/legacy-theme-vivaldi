@@ -341,7 +341,7 @@
   height: var(--biggertab);
 }
 #app:has(#browser:not(.popup):not(.is-settingspage)) .newtab button:after {
-  content: 'New Tab';
+  content: 'Neuer Tab';
   color: var(--colorFg);
   width: 100%;
   font-size: 14px;
