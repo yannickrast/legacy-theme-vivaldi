@@ -310,8 +310,8 @@
   overflow: hidden !important;
 }
 .tab-group-indicator > .tab-indicator {
-  height: 2.4px !important;
-  padding: 0 1px !important;
+  height: 2.8px !important;
+  padding: 0 1% !important;
 }
 .tab-indicator {
   border: none !important;
