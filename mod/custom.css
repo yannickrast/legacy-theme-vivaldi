@@ -82,7 +82,7 @@
 #main > div.mainbar > div > div > div.window-buttongroup.on-mainbar {
   z-index: 999 !important;
   gap: 2px !important;
-  background-color: #181b1f !important;
+  background-color: var(--colorBg) !important;
 }
 #main > div.mainbar > div > div > div.window-buttongroup.on-mainbar button {
   border-radius: 14px !important;
