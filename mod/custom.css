@@ -399,6 +399,14 @@
   border: none !important;
 }
 
+/* Remove padding from tabbar before/after toolbars */
+.tabs-left #tabs-container .toolbar-tabbar-before,
+.tabs-left #tabs-container .toolbar-tabbar-after,
+.tabs-right #tabs-container .toolbar-tabbar-before,
+.tabs-right #tabs-container .toolbar-tabbar-after {
+  padding: 0 !important;
+}
+
 /* ==========================================================================
    6. STATUS BAR & BOTTOM AREA
    ========================================================================== */
