@@ -209,7 +209,7 @@
 #app:has(#browser:not(.popup):not(.is-settingspage))
   .tab-position.is-pinned
   .tab {
-  background-color: #c6cbd708;
+  background-color: #c6cbd70b;
   max-height: var(--PinnedTab);
 }
 #app:has(#browser:not(.popup):not(.is-settingspage))
