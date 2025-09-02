@@ -415,6 +415,16 @@
   padding: 0 !important;
 }
 
+/* Remove bookmark bar */
+.bookmark-bar {
+  display: none !important;
+}
+
+/* Move toolbar buttons up */
+#ui-region-panel_button {
+  margin-top: -64px !important;
+}
+
 /* ==========================================================================
    6. STATUS BAR & BOTTOM AREA
    ========================================================================== */
