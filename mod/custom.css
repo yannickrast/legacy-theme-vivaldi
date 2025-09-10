@@ -381,6 +381,7 @@
 /* New Tab Button */
 .newtab {
   width: 100% !important;
+  margin-top: 12px !important;
 }
 .toolbar.toolbar-tabbar.toolbar-large.tab-position {
   order: 1 !important;
