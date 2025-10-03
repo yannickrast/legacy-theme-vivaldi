@@ -425,16 +425,6 @@
   display: none !important;
 }
 
-/* Top Toolbar */
-.toolbar-tabbar-before {
-  margin-bottom: 32px !important;
-}
-
-/* Bottom Toolbar */
-.tabs-button {
-  transform: rotate(180deg) !important;
-}
-
 /* ==========================================================================
    6. STATUS BAR & BOTTOM AREA
    ========================================================================== */
@@ -550,9 +540,23 @@
   scale: 80% !important;
 }
 
+/* Top Toolbar */
+.toolbar-tabbar-before {
+  margin-bottom: 12px !important;
+}
+
+/* Bottom Toolbar */
+.tabs-button {
+  transform: rotate(180deg) !important;
+}
+
 /* Extensions */
 .toolbar-extensions {
   flex-direction: row-reverse !important;
+  padding: 4px 8px !important;
+  gap: 4px !important;
+  /* background: #c6cbd70b !important; */
+  border-radius: var(--currentRadius) !important;
 }
 
 /* Floating Tab Bar (Panel Toggle) */
