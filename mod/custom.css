@@ -152,7 +152,7 @@
 #app:has(#browser:not(.popup):not(.is-settingspage)) #tabs-container {
   min-width: var(--leftbarwidth);
   max-width: var(--leftbarwidth);
-  padding: var(--browserborder) var(--browserborder) 0 var(--browserborder);
+  padding: 0 var(--browserborder) 0 var(--browserborder);
 }
 #app:has(#browser:not(.popup):not(.is-settingspage)) #tabs-tabbar-container {
   width: var(--leftbarwidth) !important;
@@ -416,14 +416,23 @@
   padding: 0 !important;
 }
 
+.toolbar-spacer-flexible {
+  margin-bottom: -48px !important;
+}
+
 /* Remove bookmark bar */
 .bookmark-bar {
   display: none !important;
 }
 
-/* Move toolbar buttons up */
-#ui-region-panel_button {
-  margin-top: -64px !important;
+/* Top Toolbar */
+.toolbar-tabbar-before {
+  margin-bottom: 32px !important;
+}
+
+/* Bottom Toolbar */
+.tabs-button {
+  transform: rotate(180deg) !important;
 }
 
 /* ==========================================================================
@@ -520,7 +529,7 @@
 
 /* Workspace Button & Popup */
 #main button[name='WorkspaceButton'] {
-  min-width: 132px !important;
+  min-width: 156px !important;
 }
 #browser:has(.WorkspacePopup) .ToolbarButtonPopup-DefaultStyles {
   top: 52px !important;
