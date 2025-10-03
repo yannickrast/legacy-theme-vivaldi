@@ -179,9 +179,21 @@
 
 /* Tab Strip & Grid Layout */
 .resize {
-  max-height: unset !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  scrollbar-color: none !important;
+  max-height: calc(90% - var(--browserborder) - 48px) !important;
 }
 
+/* Hide scrollbars but keep scrolling functional */
+.resize::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Chrome/Safari */
+}
+.resize {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 #tabs-container > div > div.tab-strip > div {
   padding-top: 12px !important;
 }
@@ -542,10 +554,29 @@
 
 /* Top Toolbar */
 .toolbar-tabbar-before {
-  margin-bottom: 12px !important;
+  /* margin-bottom: 24px !important; */
+}
+
+/* Ensure the drop-target toolbar sits visually underneath the .resize element.
+   Uses positioning + z-index so .resize renders on top. */
+#tabs-container
+  > div.toolbar.toolbar-tabbar-before.toolbar-large.toolbar-droptarget {
+  position: relative !important;
+  z-index: 0 !important;
+}
+
+/* Make sure the resize area stacks above the toolbar drop-target */
+#tabs-container > div.resize {
+  position: relative !important;
+  z-index: 2 !important;
 }
 
 /* Bottom Toolbar */
+.toolbar-tabbar-after {
+  margin-bottom: 16px !important;
+}
+
+/* Tab Button */
 .tabs-button {
   transform: rotate(180deg) !important;
 }
@@ -553,10 +584,17 @@
 /* Extensions */
 .toolbar-extensions {
   flex-direction: row-reverse !important;
+  width: 100% !important;
+  margin: 16px auto 0 !important;
   padding: 4px 8px !important;
-  gap: 4px !important;
-  /* background: #c6cbd70b !important; */
+  justify-content: space-between !important;
+  background: #c6cbd70b !important;
   border-radius: var(--currentRadius) !important;
+}
+
+/* Fix extension jump */
+.toolbar-extensions > span {
+  position: absolute !important;
 }
 
 /* Floating Tab Bar (Panel Toggle) */
