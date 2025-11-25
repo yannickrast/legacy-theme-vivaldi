@@ -194,6 +194,7 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
 #tabs-container > div > div.tab-strip > div {
   padding-top: 12px !important;
 }
@@ -406,6 +407,7 @@
 }
 #app:has(#browser:not(.popup):not(.is-settingspage)) .newtab button {
   height: var(--biggertab);
+  z-index: 8;
 }
 #app:has(#browser:not(.popup):not(.is-settingspage)) .newtab button:after {
   content: 'Neuer Tab';
@@ -583,6 +585,7 @@
 
 /* Extensions */
 .toolbar-extensions {
+  z-index: 9 !important;
   flex-direction: row-reverse !important;
   width: 100% !important;
   margin: 16px auto 0 !important;
