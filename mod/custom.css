@@ -6,7 +6,7 @@
   --browserborder: 4px; /* change this if you want to change border size */
   --PinnedTab: 42px; /* pinned tabs height */
   --biggertab: 42px; /* normal tabs height */
-  --lightgradient: linear-gradient(#c6cbd7, #13d4f9);
+  --lightgradient: linear-gradient(#c5cad8, #13d4f9);
   /* ^^^ Adjust as you want ^^^ */
   --PinnedWidth: calc(
     var(--leftbarwidth) - var(--browserborder) - var(--browserborder)
@@ -30,13 +30,12 @@
     margin-left: calc(var(--browserborder) - var(--leftbarwidth));
   }
 
-  /* Hide Panels */
-  .panel-group {
-    right: 5px !important;
-  }
-
+  /* Hide panel container */
   #panels-container {
-    width: 5px !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
   }
 
   #switch {
@@ -50,6 +49,10 @@
   #browser.transparent-tabbar #tabs-tabbar-container {
     background-color: unset !important;
   }
+}
+
+.webview-container {
+  background-color: #0b0d0e !important;
 }
 
 /* ==========================================================================
@@ -116,11 +119,11 @@
 
 /* General */
 .UrlBar-AddressField.button-textonly:not(:focus-within) {
-  background: #0b0d0e !important;
+  background: #23232f !important;
   transition: background 0.2s ease-in-out !important;
 }
 .UrlBar-AddressField.button-textonly:not(:focus-within):hover {
-  background: #c6cbd726 !important; /* Corrected Transparency */
+  background: #c5cad826 !important; /* Corrected Transparency */
 }
 .UrlField:hover {
   background: none !important;
@@ -144,7 +147,7 @@
     border: none;
   }
   .UrlBar-AddressField.button-textonly:not(:focus-within) .UrlField:hover {
-    background-color: #c6cbd725;
+    background-color: #c5cad825;
     border-radius: var(--radiusHalf);
   }
   .UrlBar-AddressField.button-textonly:not(:focus-within)
@@ -166,7 +169,7 @@
 #app:has(#browser:not(.popup):not(.is-settingspage)) #tabs-container {
   min-width: var(--leftbarwidth);
   max-width: var(--leftbarwidth);
-  padding: 0 14px !important;
+  padding: 0 14px 8px !important;
 }
 #app:has(#browser:not(.popup):not(.is-settingspage)) #tabs-tabbar-container {
   width: var(--leftbarwidth) !important;
@@ -212,7 +215,7 @@
   overflow-y: auto !important;
   overflow-x: hidden !important;
   scrollbar-color: none !important;
-  max-height: calc(90% - var(--browserborder) - 48px) !important;
+  max-height: calc(90% - var(--browserborder) - 104px) !important;
 }
 
 /* Hide scrollbars but keep scrolling functional */
@@ -260,7 +263,7 @@
 #app:has(#browser:not(.popup):not(.is-settingspage))
   .tab-position.is-pinned
   .tab {
-  background-color: #c6cbd70b;
+  background-color: #c5cad80b;
   max-height: var(--PinnedTab);
 }
 #app:has(#browser:not(.popup):not(.is-settingspage))
@@ -329,7 +332,7 @@
 
 /* Active Tab */
 #browser.color-behind-tabs-on .tab.active.active {
-  background-color: #343b4b75 !important;
+  background-color: #343a4a75 !important;
 }
 
 /* Ensure selection SVGs fill the tab height */
@@ -415,16 +418,16 @@
   border-radius: 0px !important;
 }
 .color-behind-tabs-on .tab-indicator {
-  background-color: #c6cbd735 !important;
+  background-color: #c5cad835 !important;
 }
 .color-behind-tabs-on .tab.active + .tab-group-indicator .tab-indicator.active {
-  background-color: #c6cbd7 !important;
+  background-color: #c5cad8 !important;
 }
 
 /* New Tab Button */
-.newtab {
+.button-toolbar.newtab {
   width: 100% !important;
-  margin-top: 12px !important;
+  margin-top: 24px !important;
 }
 .toolbar.toolbar-tabbar.toolbar-large.tab-position {
   order: 1 !important;
@@ -447,9 +450,12 @@
 }
 
 /* Tab Separator */
-#tabs-container > div > div.tab-strip > div.separator > hr {
-  background: none !important;
-  border: none !important;
+.separator {
+  height: 0 !important;
+}
+
+.separator hr {
+  display: none !important;
 }
 
 /* Remove padding from tabbar before/after toolbars */
@@ -572,6 +578,16 @@
   display: none !important;
 }
 
+.panel-group {
+  left: 328px !important;
+  top: 32px !important;
+  bottom: 0 !important;
+  margin-left: 8px !important;
+  height: calc(100% - 64px);
+  border-radius: 12px !important;
+  box-shadow: var(--colorTabBar) 8px !important;
+}
+
 /* ==========================================================================
    8. MISCELLANEOUS & QOL TWEAKS
    ========================================================================== */
@@ -626,11 +642,11 @@
   padding: 4px 8px !important;
   justify-content: space-between !important;
   border-radius: var(--currentRadius) !important;
-  background: #c6cbd70b !important;
+  background: #c5cad80b !important;
 }
 
 .tabbar-workspace-button:hover {
-  background: #c6cbd726 !important;
+  background: #c5cad826 !important;
 }
 
 .tabbar-workspace-button > button:hover {
@@ -645,7 +661,7 @@
   margin: 16px 0 !important;
   padding: 4px 8px !important;
   justify-content: space-between !important;
-  background: #c6cbd70b !important;
+  background: #c5cad80b !important;
   border-radius: var(--currentRadius) !important;
 }
 
