@@ -23,8 +23,8 @@
   #browser:not(.fullscreen) #webpage-stack {
     box-shadow: 0 0 0 calc(var(--browserborder) * 2) var(--colorTabBar);
     border-radius: var(--radiusHalf);
-    margin-bottom: var(--browserborder);
-    margin-right: var(--browserborder);
+    /* margin-bottom: var(--browserborder);
+    margin-right: var(--browserborder); */
   }
 
   #browser:not(.fullscreen):has(#panels-container.switcher) #webpage-stack {
@@ -58,12 +58,18 @@
    ========================================================================== */
 
 /* General */
-#app:has(#browser:not(.popup):not(.is-settingspage)) .mainbar {
+.mainbar {
+  padding: 12px 4px !important;
   background-color: var(--colorTabBar);
   border-bottom: unset !important;
 }
-.mainbar {
-  padding: 12px 4px !important;
+
+/* Full width */
+.auto-hide-wrapper.top,
+.auto-hide-wrapper.bottom {
+  width: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
 }
 
 /* Vivaldi Button */
@@ -87,12 +93,12 @@
 }
 
 /* Window Buttons (Minimize, Maximize, Close) */
-#main > div.mainbar > div > div > div.window-buttongroup.on-mainbar {
+.window-buttongroup.on-mainbar {
   z-index: 999 !important;
   gap: 2px !important;
   background-color: var(--colorBg) !important;
 }
-#main > div.mainbar > div > div > div.window-buttongroup.on-mainbar button {
+.window-buttongroup.on-mainbar button {
   border-radius: 14px !important;
 }
 
@@ -175,6 +181,12 @@
   .tabbar-wrapper
   > .tabbar-wrapper {
   box-shadow: var(--colorTabBar) 0 calc(var(--leftbarwidth) * 1.5);
+}
+
+/* Full height */
+.auto-hide-wrapper.left {
+  top: 0 !important;
+  height: 100% !important;
 }
 
 /* Tab Strip & Grid Layout */
@@ -583,12 +595,36 @@
   transform: rotate(180deg) !important;
 }
 
+/* #tabs-container {
+  margin: 16px 0 !important;
+} */
+
+/* Workspace button */
+.tabbar-workspace-button {
+  z-index: 9 !important;
+  flex-direction: row-reverse !important;
+  width: 100% !important;
+  margin: 16px 0 !important;
+  padding: 4px 8px !important;
+  justify-content: space-between !important;
+  border-radius: var(--currentRadius) !important;
+  background: #c6cbd70b !important;
+}
+
+.tabbar-workspace-button:hover {
+  background: #c6cbd726 !important;
+}
+
+.tabbar-workspace-button > button:hover {
+  background: none !important;
+}
+
 /* Extensions */
 .toolbar-extensions {
   z-index: 9 !important;
   flex-direction: row-reverse !important;
   width: 100% !important;
-  margin: 16px auto 0 !important;
+  margin: 16px 0 !important;
   padding: 4px 8px !important;
   justify-content: space-between !important;
   background: #c6cbd70b !important;
