@@ -22,7 +22,7 @@
   /* Curved Frame Effect */
   #browser:not(.fullscreen) #webpage-stack {
     box-shadow: 0 0 0 calc(var(--browserborder) * 2) var(--colorTabBar);
-    border-radius: var(--radiusHalf);
+    /* border-radius: var(--radiusHalf); */
     /* margin-bottom: var(--browserborder);
     margin-right: var(--browserborder); */
   }
