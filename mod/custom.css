@@ -2,7 +2,7 @@
    1. GLOBAL VARIABLES & ROOT
    ========================================================================== */
 :root {
-  --leftbarwidth: 320px; /* adjust this for your best view */
+  --leftbarwidth: 340px; /* adjust this for your best view */
   --browserborder: 4px; /* change this if you want to change border size */
   --PinnedTab: 42px; /* pinned tabs height */
   --biggertab: 42px; /* normal tabs height */
@@ -592,7 +592,7 @@
 }
 
 .panel-group {
-  left: 308px !important;
+  left: calc(var(--leftbarwidth) - 12px) !important;
   top: 0 !important;
   bottom: 0 !important;
   height: 100% !important;
@@ -688,7 +688,7 @@
 
 .extension-popup {
   z-index: 11 !important;
-  margin-left: 332px !important;
+  margin-left: calc(var(--leftbarwidth) + 12px) !important;
 }
 
 .extension-popup::before {
