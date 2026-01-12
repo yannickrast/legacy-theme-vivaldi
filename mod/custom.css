@@ -205,10 +205,9 @@
 
 /* Full height */
 .auto-hide-wrapper.left {
-  top: calc(56px + (100% - 56px) / 2) !important;
-  bottom: auto !important;
-  transform: translateY(-50%) !important;
-  height: 80% !important;
+  top: calc(56px + 120px) !important;
+  bottom: calc(120px) !important;
+  height: stretch !important;
   z-index: 8 !important;
   margin-left: 8px !important;
   border-radius: 12px !important;
