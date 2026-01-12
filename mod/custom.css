@@ -686,6 +686,19 @@
   position: absolute !important;
 }
 
+.extension-popup {
+  z-index: 11 !important;
+  margin-left: 332px !important;
+}
+
+.extension-popup::before {
+  display: none !important;
+}
+
+.extension-popup::after {
+  display: none !important;
+}
+
 /* Floating Tab Bar (Panel Toggle) */
 #app:has(#browser:not(.popup):not(.is-settingspage))
   #browser:has(.switcher):not(.toolbar-edit-mode) {
