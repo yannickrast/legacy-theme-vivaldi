@@ -299,6 +299,10 @@
   display: none;
 }
 
+.tab-position.is-pinned:hover .tab:not(.active) .tab-header {
+  background-color: #c5cad826 !important;
+}
+
 /* Normal Tabs */
 #app:has(#browser:not(.popup):not(.is-settingspage))
   .resize
@@ -421,6 +425,7 @@
 .tab-group-indicator > .tab-indicator {
   height: 2.8px !important;
   padding: 0 1% !important;
+  border-radius: 12px !important;
 }
 .tab-indicator {
   border: none !important;
