@@ -205,9 +205,10 @@
 
 /* Full height */
 .auto-hide-wrapper.left {
-  top: 72px !important;
-  bottom: 0 !important;
-  height: calc(100% - 88px) !important;
+  top: calc(56px + (100% - 56px) / 2) !important;
+  bottom: auto !important;
+  transform: translateY(-50%) !important;
+  height: 80% !important;
   z-index: 8 !important;
   margin-left: 8px !important;
   border-radius: 12px !important;
@@ -224,7 +225,7 @@
   overflow-y: auto !important;
   overflow-x: hidden !important;
   scrollbar-color: none !important;
-  max-height: calc(90% - var(--browserborder) - 104px) !important;
+  max-height: calc(100% - 296px) !important;
 }
 
 /* Hide scrollbars but keep scrolling functional */
@@ -586,7 +587,7 @@
   min-width: 156px !important;
 }
 #browser:has(.WorkspacePopup) .ToolbarButtonPopup-DefaultStyles {
-  top: 124px !important;
+  top: 240px !important;
 }
 #browser:has(.WorkspacePopup) .ToolbarButtonPopup-DefaultStyles::before {
   display: none !important;
