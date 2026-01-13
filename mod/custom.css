@@ -61,6 +61,10 @@
   grid-template-rows: 0px [content] 1fr 0px;
 }
 
+.webpageview .webpage {
+  background-color: #0b0d0e !important;
+}
+
 /* ==========================================================================
    3. TITLE BAR (MAINBAR)
    ========================================================================== */
@@ -205,8 +209,8 @@
 
 /* Full height */
 .auto-hide-wrapper.left {
-  top: calc(56px + 90px) !important;
-  bottom: calc(90px) !important;
+  top: calc(56px + 102px) !important;
+  bottom: calc(102px) !important;
   height: stretch !important;
   z-index: 8 !important;
   margin-left: 8px !important;
