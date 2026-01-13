@@ -6,7 +6,7 @@
   --browserborder: 4px; /* change this if you want to change border size */
   --PinnedTab: 42px; /* pinned tabs height */
   --biggertab: 42px; /* normal tabs height */
-  --lightgradient: linear-gradient(#c5cad8, #13d4f9);
+  --lightgradient: linear-gradient(#aeb0b7, #49ceff);
   /* ^^^ Adjust as you want ^^^ */
   --PinnedWidth: calc(
     var(--leftbarwidth) - var(--browserborder) - var(--browserborder)
@@ -62,7 +62,7 @@
 }
 
 .webpageview .webpage {
-  background-color: #0b0d0e !important;
+  background-color: #101116 !important;
 }
 
 /* ==========================================================================
@@ -129,11 +129,11 @@
 
 /* General */
 .UrlBar-AddressField.button-textonly:not(:focus-within) {
-  background: #23232f !important;
+  background: #101116 !important;
   transition: background 0.2s ease-in-out !important;
 }
 .UrlBar-AddressField.button-textonly:not(:focus-within):hover {
-  background: #c5cad826 !important; /* Corrected Transparency */
+  background: #aeb0b725 !important; /* Corrected Transparency */
 }
 .UrlField:hover {
   background: none !important;
@@ -157,7 +157,7 @@
     border: none;
   }
   .UrlBar-AddressField.button-textonly:not(:focus-within) .UrlField:hover {
-    background-color: #c5cad825;
+    background-color: #aeb0b725;
     border-radius: var(--radiusHalf);
   }
   .UrlBar-AddressField.button-textonly:not(:focus-within)
@@ -276,7 +276,7 @@
 #app:has(#browser:not(.popup):not(.is-settingspage))
   .tab-position.is-pinned
   .tab {
-  background-color: #c5cad80b;
+  background-color: #aeb0b70b;
   max-height: var(--PinnedTab);
 }
 #app:has(#browser:not(.popup):not(.is-settingspage))
@@ -304,7 +304,7 @@
 }
 
 .tab-position.is-pinned:hover .tab:not(.active) .tab-header {
-  background-color: #c5cad826 !important;
+  background-color: #aeb0b725 !important;
 }
 
 /* Normal Tabs */
@@ -436,10 +436,10 @@
   border-radius: 0px !important;
 }
 .color-behind-tabs-on .tab-indicator {
-  background-color: #c5cad835 !important;
+  background-color: #aeb0b735 !important;
 }
 .color-behind-tabs-on .tab.active + .tab-group-indicator .tab-indicator.active {
-  background-color: #c5cad8 !important;
+  background-color: #aeb0b7 !important;
 }
 
 /* New Tab Button */
@@ -671,11 +671,11 @@
   padding: 2px 8px !important;
   justify-content: space-between !important;
   border-radius: var(--currentRadius) !important;
-  background: #c5cad80b !important;
+  background: #aeb0b70b !important;
 }
 
 .tabbar-workspace-button:hover {
-  background: #c5cad826 !important;
+  background: #aeb0b725 !important;
 }
 
 .tabbar-workspace-button > button:hover {
