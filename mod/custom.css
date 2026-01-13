@@ -205,8 +205,8 @@
 
 /* Full height */
 .auto-hide-wrapper.left {
-  top: calc(56px + 120px) !important;
-  bottom: calc(120px) !important;
+  top: calc(56px + 90px) !important;
+  bottom: calc(90px) !important;
   height: stretch !important;
   z-index: 8 !important;
   margin-left: 8px !important;
