@@ -75,7 +75,7 @@
   background-color: var(--colorTabBar);
   border-bottom: unset !important;
   z-index: 9 !important;
-  box-shadow: var(--colorTabBar) 0 0 4px 0 !important;
+  box-shadow: #000000 0 0 4px 0 !important;
 }
 
 /* Full width */
@@ -215,6 +215,7 @@
   z-index: 8 !important;
   margin-left: 8px !important;
   border-radius: 12px !important;
+  box-shadow: 0 0 4px #000000 !important;
 }
 
 /* Tab Bar Wrapper */
@@ -589,7 +590,7 @@
   min-width: 156px !important;
 } */
 #browser:has(.WorkspacePopup) .ToolbarButtonPopup-DefaultStyles {
-  top: 240px !important;
+  top: 220px !important;
 }
 #browser:has(.WorkspacePopup) .ToolbarButtonPopup-DefaultStyles::before {
   display: none !important;
@@ -605,7 +606,6 @@
   bottom: 0 !important;
   height: 100% !important;
   border-radius: 0 12px 12px 0 !important;
-  box-shadow: none !important;
 }
 
 .panel {
