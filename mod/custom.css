@@ -87,6 +87,12 @@
   /* z-index: 9 !important; */
 }
 
+/* Remove transform */
+.auto-hide-wrapper.top.show {
+  transform: none !important;
+  border-radius: 0 !important;
+}
+
 /* Scrollbar */
 .auto-hide-wrapper.right {
   top: 64px !important;
@@ -209,7 +215,8 @@
 
 /* Full height */
 .auto-hide-wrapper.left {
-  top: calc(56px + 102px) !important;
+  /* top: calc(56px + 102px) !important; */
+  top: calc(102px) !important;
   bottom: calc(102px) !important;
   height: stretch !important;
   z-index: 8 !important;
