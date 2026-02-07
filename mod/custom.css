@@ -84,7 +84,14 @@
   width: 100% !important;
   left: 0 !important;
   right: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
   /* z-index: 9 !important; */
+}
+
+/* Remove border-radius */
+.auto-hide-wrapper .mainbar:first-child {
+  border-radius: 0 !important;
 }
 
 /* Remove transform */
@@ -101,7 +108,7 @@
 
 /* Vivaldi Button */
 #app:has(#browser:not(.popup):not(.is-settingspage)) button.vivaldi {
-  width: 34px !important;
+  /* width: 34px !important; */
   margin: 0 0 0 var(--browserborder) !important;
   padding: 0 !important;
 }
@@ -223,6 +230,7 @@
   margin-left: 8px !important;
   border-radius: 12px !important;
   box-shadow: 0 0 3px #000000 !important;
+  padding-left: 0 !important;
 }
 
 /* Tab Bar Wrapper */
