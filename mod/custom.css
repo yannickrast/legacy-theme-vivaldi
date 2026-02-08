@@ -108,7 +108,7 @@
 
 /* Vivaldi Button */
 #app:has(#browser:not(.popup):not(.is-settingspage)) button.vivaldi {
-  /* width: 34px !important; */
+  width: 34px !important;
   margin: 0 0 0 var(--browserborder) !important;
   padding: 0 !important;
 }
@@ -119,6 +119,9 @@
 }
 .mainbar > div > div > button {
   scale: 132% !important;
+}
+#browser.menu-icon .vivaldi {
+  grid-template-columns: 34px !important;
 }
 
 /* Page Title */
