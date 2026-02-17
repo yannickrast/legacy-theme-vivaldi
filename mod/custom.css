@@ -222,10 +222,13 @@
   bottom: calc(102px) !important;
   height: stretch !important;
   z-index: 8 !important;
-  margin-left: 8px !important;
   border-radius: 12px !important;
   box-shadow: 0 0 3px #000000 !important;
   padding-left: 0 !important;
+}
+
+.auto-hide-wrapper.left.show {
+  margin-left: 8px !important;
 }
 
 /* Tab Bar Wrapper */
